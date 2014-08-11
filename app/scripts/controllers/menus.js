@@ -9,9 +9,27 @@
  */
 angular.module('4envApp')
   .controller('MenusCtrl', function ($scope) {
-    $scope.items = [
+    var menu = {
+      top: [
+        {
+          name: 'Targets',
+          url: '/targets'
+        },
+        {
+          name: 'Login',
+          url: '/'
+        },
+        {
+          name: 'Help',
+          url: '/'
+        }
+    ],
+      side: [
       'Dashboard',
       'Login',
       'Help'
-    ];
+    ]
+    }
+    $scope.menu = menu;
+
   });

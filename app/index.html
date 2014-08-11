@@ -15,6 +15,9 @@
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="styles/dashboard.css">
+
 </head>
 
 <body>
@@ -22,17 +25,23 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+  <div ng-include="'views/topmenu.html'"></div>
   <!-- Add your site or application content here -->
   <div class="container">
-    <div class="header" ng-controller="MenusCtrl">
-      <ul class="nav nav-pills pull-right">
-        <li class="active" ng-repeat="item in items"><a ng-href="#">{{item}}</a>
-        </li>
-      </ul>
-      <h3 class="text-muted">4env</h3>
-    </div>
+    <!--<div class="header" ng-controller="MenusCtrl">
+  <ul class="nav nav-pills pull-right">
+    <li class="active" ng-repeat="item in menu.top"><a ng-href="#{{item.url}}">{{item.name}}</a>
+    </li>
+  </ul>
+  <h3 class="text-muted">4env</h3>
+</div>-->
 
     <div ng-view=""></div>
+
+
+
+
+
 
     <div class="footer">
       <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
@@ -80,6 +89,8 @@
   <script src="scripts/controllers/targets.js"></script>
   <script src="scripts/controllers/menus.js"></script>
   <!-- endbuild -->
+
+  <script src="scripts/docs.min.js"></script>
 </body>
 
 </html>
